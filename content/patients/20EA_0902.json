@@ -1,0 +1,49 @@
+{
+  "id": "20EA_0902",
+  "age": 57,
+  "gender": "Male",
+  "data": [
+    {
+      "type": "MRI",
+      "sequence": "M0",
+      "comments": "Left hemisphere",
+      "url": "https://brainbox.pasteur.fr/braincov/20EA_0902/M0.nii.gz",
+      "thumbnail": "https://brainbox.pasteur.fr/braincov/thumbnails/20EA_0902/M0.jpg"
+    },
+    {
+      "type": "MRI",
+      "sequence": "Mag",
+      "comments": "Left hemisphere",
+      "url": "https://brainbox.pasteur.fr/braincov/20EA_0902/Mag.nii.gz",
+      "thumbnail": "https://brainbox.pasteur.fr/braincov/thumbnails/20EA_0902/Mag.jpg"
+    },
+    {
+      "type": "MRI",
+      "sequence": "R2star",
+      "comments": "Left hemisphere",
+      "url": "https://brainbox.pasteur.fr/braincov/20EA_0902/R2star.nii.gz",
+      "thumbnail": "https://brainbox.pasteur.fr/braincov/thumbnails/20EA_0902/R2star.jpg"
+    },
+    {
+      "type": "MRI",
+      "sequence": "SWI",
+      "comments": "Left hemisphere",
+      "url": "https://brainbox.pasteur.fr/braincov/20EA_0902/SWI.nii.gz",
+      "thumbnail": "https://brainbox.pasteur.fr/braincov/thumbnails/20EA_0902/SWI.jpg"
+    },
+    {
+      "type": "MRI",
+      "sequence": "QSM",
+      "comments": "Left hemisphere",
+      "url": "https://brainbox.pasteur.fr/braincov/20EA_0902/QSM.nii.gz",
+      "thumbnail": "https://brainbox.pasteur.fr/braincov/thumbnails/20EA_0902/QSM.jpg"
+    },
+    {
+      "type": "Histology",
+      "staining": "Pax6",
+      "comments": "Right hemisphere",
+      "url": "https://microdraw.pasteur.fr/F119_P32/F119_P32.json",
+      "thumbnail": "https://microdraw.pasteur.fr/braincov/demo/demo-4.jpg"
+    }
+  ]
+}
