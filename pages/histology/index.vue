@@ -13,7 +13,6 @@ export default {
 
   async asyncData({ $content, error }) {
     const patients = await $content('patients')
-      .only(['id', 'data'])
       .sortBy('createdAt', 'asc')
       .fetch()
       .catch((err) => {

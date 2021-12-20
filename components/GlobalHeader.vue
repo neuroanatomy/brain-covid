@@ -9,19 +9,13 @@
             <nuxt-link to="/">Home</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/about/">About</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/patients">Patients</nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/">Research</nuxt-link>
-          </li>
-          <li>
             <nuxt-link to="/mri/">MRI</nuxt-link>
           </li>
           <li>
             <nuxt-link to="/histology/">Histology</nuxt-link>
+          </li>
+          <li>
+            <nuxt-link to="/about/">About</nuxt-link>
           </li>
         </ul>
       </nav>
