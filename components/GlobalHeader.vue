@@ -57,4 +57,10 @@ export default {}
   flex-flow: row wrap;
   gap: 2rem;
 }
+.header__nav a {
+  text-decoration: none;
+}
+.header .nuxt-link-exact-active {
+  text-decoration: underline;
+}
 </style>

@@ -8,6 +8,11 @@
         (Public Health France).
       </p>
       <p>
+        Check out our <nuxt-link to="#members">members</nuxt-link> and
+        <nuxt-link to="#partners">partners</nuxt-link>
+      </p>
+      <h2>Genesis</h2>
+      <p>
         If most deaths are due to respiratory or cardiovascular failure, it
         quickly became apparent during the epidemic that the virus had a tropism
         for the central nervous system (Ellul et al. 2020). The nervous
@@ -41,6 +46,7 @@
         signal abnormalities with neuropathological findings relative to the
         SARS-CoV-2 infection.
       </p>
+      <h2>Methods</h2>
       <p>
         MRI offers a “big picture” image on the whole organ compared to
         conventional histology, which is often limited to small sections. Here
@@ -67,12 +73,76 @@
         approved by the authorized institutions (Agence de la Biomédecine PFS
         20-008; French ministry of research DC2020- 4022).
       </p>
+
+      <section>
+        <h2 id="members">Members</h2>
+        <ul class="members__list" clean-list>
+          <li v-for="member of members" :key="member.id">
+            <member-card :member="member" />
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="partners">Partners</h2>
+        <ul class="partners__list" clean-list>
+          <li class="partner">
+            <nuxt-picture
+              src="/partners/icm-logo.png"
+              width="200"
+              height="214"
+              loading="lazy"
+            />
+          </li>
+          <li class="partner">
+            <nuxt-img
+              src="/partners/Logo-Institut_Pasteur.svg"
+              width="200"
+              height="54"
+              loading="lazy"
+            />
+          </li>
+        </ul>
+      </section>
     </article>
   </main>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content, error }) {
+    const members = await $content('members')
+      .sortBy('createdAt', 'asc')
+      .fetch()
+      .catch((err) => {
+        error({ statusCode: 404, message: 'Page not found' })
+        console.log(err)
+      })
+
+    return {
+      members,
+    }
+  },
+}
 </script>
 
-<style scoped></style>
+<style scoped>
+.members__list,
+.partners__list {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+  gap: 3rem;
+}
+.partners__list {
+  align-items: center;
+}
+.partner {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  place-content: center;
+  border-radius: 8px;
+  background-color: var(--contrast);
+}
+</style>

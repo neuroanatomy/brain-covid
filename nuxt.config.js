@@ -35,6 +35,7 @@ export default {
 
   image: {
     dir: 'assets/images',
+    domains: ['https://thispersondoesnotexist.com/'],
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

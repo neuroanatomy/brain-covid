@@ -25,7 +25,7 @@ export default {
 .cases__list {
   margin: 2rem 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+  gap: 3rem;
 }
 </style>

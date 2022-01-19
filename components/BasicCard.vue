@@ -1,26 +1,22 @@
 <template>
-  <div class="card">
+  <nuxt-link
+    class="card"
+    :to="{ name: `${type}-slug`, params: { slug: item.id } }"
+  >
     <div v-if="item.data" class="card__thumbnail">
       <nuxt-picture
         :src="`/${type}/${item.id}/thumbnail.jpg`"
-        sizes="sm:100vw lg:311px"
-        width="311"
-        height="160"
+        sizes="sm:100vw lg:100px"
+        width="100"
+        height="100"
         alt=""
       />
     </div>
     <div class="card__content">
-      <h3>
-        <nuxt-link
-          class="nice-link"
-          :to="{ name: `${type}-slug`, params: { slug: item.id } }"
-        >
-          Patient {{ item.id }}
-        </nuxt-link>
-      </h3>
+      <h3>Patient {{ item.id }}</h3>
       <p class="card__meta">age: {{ item.age }}, gender: {{ item.gender }}</p>
     </div>
-  </div>
+  </nuxt-link>
 </template>
 
 <script>
@@ -42,16 +38,31 @@ export default {
 .card {
   margin: 0;
   display: flex;
-  flex-direction: column;
+  flex-flow: row nowrap;
   overflow: hidden;
+  text-decoration: none;
   border-radius: 4px;
-  border: solid 1px var(--accent);
+  outline: solid 1px var(--accent);
+  outline-offset: 0;
+  transition: outline-offset 0.2s ease;
 }
-.card > :last-child {
-  margin-top: auto;
+.card:hover {
+  outline-offset: 5px;
 }
-.card__thumbnail img {
-  display: block;
+.card:focus-visible {
+  outline: solid 3px var(--contrast);
+  text-decoration: none;
+}
+.card__thumbnail {
+  position: relative;
+}
+.card__thumbnail ::v-deep picture,
+.card__thumbnail ::v-deep img {
+  position: relative;
+  height: 100%;
+}
+.card__thumbnail ::v-deep img {
+  object-fit: cover;
 }
 .card__content {
   padding: 2rem 2rem 2.4rem;
