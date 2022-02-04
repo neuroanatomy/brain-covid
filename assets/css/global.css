@@ -114,7 +114,8 @@ p {
 * + p {
   margin: 1.2rem 0;
 }
-a {
+a,
+button {
   color: inherit;
 }
 a:hover {
@@ -123,6 +124,12 @@ a:hover {
 a:focus-visible {
   outline: dotted 2px var(--contrast);
   text-decoration: none;
+}
+button {
+  padding: 2rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
 }
 /*END CSS RESET*/
 
@@ -159,9 +166,8 @@ article:last-of-type {
   max-width: 131rem;
 }
 .editorial {
-  padding: 2rem 3rem;
   margin: 0 auto;
-  max-width: calc(70ch + 6rem);
+  max-width: 70ch;
 }
 .editorial h2 {
   margin-top: 3rem;
@@ -229,6 +235,10 @@ article:last-of-type {
   position: absolute !important;
   white-space: nowrap !important;
   width: 1px !important;
+}
+
+.data-iframe {
+  min-height: calc(100vh - 2rem);
 }
 
 @media (prefers-reduced-motion: no-preference) {

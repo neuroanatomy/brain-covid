@@ -165,7 +165,7 @@ export default {
   margin: 4rem auto 2rem;
   max-width: 120rem;
   display: grid;
-  grid-template-columns: 3fr 2fr;
+  grid-template-columns: 1fr;
   align-items: center;
   justify-content: space-between;
   gap: 6rem;
@@ -217,6 +217,7 @@ export default {
   .hp-intro {
     /* header height and margins */
     min-height: calc(100vh - 7.6rem - 6rem);
+    grid-template-columns: 3fr 2fr;
   }
 }
 </style>

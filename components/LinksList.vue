@@ -1,19 +1,11 @@
 <template>
   <section class="toc">
     <slot name="title" />
-    <strong>Open in new tab:</strong>
+    <strong>Open below:</strong>
     <nav aria-label="Quick access">
       <ul class="toc__list" clean-list>
         <li v-for="item of items" :key="item.id">
-          <a
-            :href="getUrlByType + item.url"
-            rel="noreferer noopener"
-            target="_blank"
-            class="button toc__list__item"
-            :title="`Open ${item.sequence} - ${item.comments} in new tab`"
-            ><span v-if="item.sequence">{{ item.sequence }} - </span
-            >{{ item.comments }}</a
-          >
+          <iframe-button :item="item" :rootUrl="getRootUrl" />
         </li>
       </ul>
     </nav>
@@ -35,7 +27,7 @@ export default {
     },
   },
   computed: {
-    getUrlByType() {
+    getRootUrl() {
       const type = this.itemType
       let url
       switch (type) {
@@ -58,9 +50,6 @@ export default {
 <style scoped>
 .toc {
   margin: 4rem 0;
-  /* padding: 2rem; */
-  /* border-radius: 8px; */
-  /* background-color: var(--accent-dark); */
 }
 .toc__list {
   margin-top: 2rem;
@@ -72,5 +61,6 @@ export default {
   margin: 0;
   padding: 2rem;
   display: block;
+  width: 100%;
 }
 </style>

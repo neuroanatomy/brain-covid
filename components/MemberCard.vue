@@ -32,10 +32,10 @@ export default {
   padding: 2rem 1.6rem;
   height: 100%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: flex-start;
   align-content: center;
-  gap: 2rem;
+  gap: calc(1rem + 1vw);
   font-size: clamp(1.4rem, 1.3354rem + 0.202vw, 1.6rem);
   text-align: left;
   border: 1px solid var(--accent);
@@ -45,6 +45,17 @@ export default {
 .member * {
   margin: 0;
 }
+
+.member__info {
+  flex-basis: 0;
+  flex-grow: 999;
+  min-width: 60%;
+}
+.member__photo {
+  flex-basis: 80px;
+  flex-grow: 1;
+}
+
 .member__info > * + * {
   margin-top: 0.6rem;
 }
