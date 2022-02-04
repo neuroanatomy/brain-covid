@@ -1,9 +1,10 @@
 <template>
   <div class="member">
     <nuxt-picture
+      v-if="member.photo"
       :src="member.photo"
-      width="100"
-      height="100"
+      width="80"
+      height="80"
       loading="lazy"
       class="member__photo"
     />
@@ -40,7 +41,6 @@ export default {
   text-align: left;
   border: 1px solid var(--accent);
   border-radius: 1rem;
-  /* background-color: var(--accent-dark); */
 }
 .member * {
   margin: 0;

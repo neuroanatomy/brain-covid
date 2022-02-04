@@ -120,6 +120,7 @@
           <h2 id="partners">Partners</h2>
           <ul class="partners__list" clean-list>
             <li class="partner">
+              <!-- using nuxt-picture for jpg/png -->
               <nuxt-picture
                 src="/partners/icm-logo.png"
                 width="200"
@@ -128,6 +129,7 @@
               />
             </li>
             <li class="partner">
+              <!-- using nuxt-img for svg -->
               <nuxt-img
                 src="/partners/Logo-Institut_Pasteur.svg"
                 width="200"
@@ -144,6 +146,7 @@
 
 <script>
 export default {
+  // fetch members from '/content/members'
   async asyncData({ $content, error }) {
     const members = await $content('members')
       .sortBy('createdAt', 'asc')

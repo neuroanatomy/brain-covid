@@ -28,6 +28,7 @@ export default {
   },
   computed: {
     getRootUrl() {
+      // determines the service's url to call
       const type = this.itemType
       let url
       switch (type) {
@@ -38,7 +39,7 @@ export default {
           url = 'https://microdraw.pasteur.fr/data?source='
           break
         default:
-          url = 'http://localhost:3000'
+          url = '/'
           break
       }
       return url

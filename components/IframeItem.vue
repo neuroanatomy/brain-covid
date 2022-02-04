@@ -1,5 +1,5 @@
 <template>
-  <div class="toc">
+  <div>
     <iframe
       sandbox="allow-same-origin allow-scripts"
       :src="url"

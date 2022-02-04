@@ -16,6 +16,7 @@
   z-index: 999;
 }
 @media (prefers-reduced-motion: no-preference) {
+  /* enable animation for users without reduced motion preference */
   .skip-link {
     transition: transform 0.3s;
   }

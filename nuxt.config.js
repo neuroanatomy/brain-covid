@@ -35,6 +35,7 @@ export default {
 
   image: {
     dir: 'assets/images',
+    // allow specific domains to serve images
     domains: ['https://thispersondoesnotexist.com/'],
   },
 

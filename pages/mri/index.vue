@@ -26,6 +26,7 @@
 export default {
   name: 'MRIPage',
 
+  // fetch patients from '/content/patients'
   async asyncData({ $content, error }) {
     const patients = await $content('patients')
       .sortBy('createdAt', 'asc')

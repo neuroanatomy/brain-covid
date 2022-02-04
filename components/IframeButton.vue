@@ -1,10 +1,5 @@
 <template>
-  <button
-    :href="item.url"
-    class="button toc__list__item"
-    :value="item.url"
-    @click="updateUrl"
-  >
+  <button :href="item.url" class="button toc__list__item" @click="updateUrl">
     <span v-if="item.sequence">{{ item.sequence }} - </span>{{ item.comments }}
   </button>
 </template>
@@ -25,12 +20,13 @@ export default {
   },
   computed: {
     getFullUrl() {
+      // create the full iframe's url with the service's url and the item's url
       return this.rootUrl + this.item.url
     },
   },
   methods: {
     updateUrl() {
-      // method triggered by input
+      // method triggered by click sending the event too the root component
       this.$nuxt.$emit('button-click', this.getFullUrl)
     },
   },

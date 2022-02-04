@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  // fetch the patient's data based on the slug parameter
   async asyncData({ $content, params, error }) {
     const slug = params.slug
     const patient = await $content('patients', slug)
@@ -27,11 +28,13 @@ export default {
   },
   data() {
     return {
+      // start without an iframe for performance
       currentUrl: null,
     }
   },
   computed: {
     histologyItem() {
+      // only return the histology items from the patient's data
       const data = this.patient.data
       return data.filter((item) => {
         return item.type === 'Histology'
@@ -39,6 +42,7 @@ export default {
     },
   },
   created() {
+    // listen on the 'button-click' envent and update the iframe's url accordingly
     this.$nuxt.$on('button-click', (url) => {
       this.currentUrl = url
     })

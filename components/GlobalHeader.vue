@@ -14,18 +14,11 @@
           <li>
             <nuxt-link to="/histology/">Histology</nuxt-link>
           </li>
-          <li>
-            <nuxt-link to="/#about">About</nuxt-link>
-          </li>
         </ul>
       </nav>
     </div>
   </header>
 </template>
-
-<script>
-export default {}
-</script>
 
 <style scoped>
 .header {
@@ -36,6 +29,7 @@ export default {}
   justify-content: space-between;
   align-items: baseline;
 }
+/* needed to create a full width background despite parent's padding*/
 .header::after {
   content: '';
   position: absolute;
@@ -43,7 +37,6 @@ export default {}
   margin-left: calc(50% - 50vw);
   width: 100vw;
   height: 100%;
-  /* border-radius: 8px; */
   background-color: var(--accent-dark);
   z-index: -1;
 }
