@@ -14,7 +14,10 @@
     </div>
     <div class="card__content">
       <h3>Patient {{ item.id }}</h3>
-      <p class="card__meta">age: {{ item.age }}, gender: {{ item.gender }}</p>
+      <ul class="card__meta" clean-list>
+        <li><strong>Age: </strong>{{ item.age }}</li>
+        <li><strong>Gender: </strong>{{ item.gender }}</li>
+      </ul>
     </div>
   </nuxt-link>
 </template>

@@ -33,18 +33,19 @@
   size-adjust: 98%;
 }
 
-/*CSS RESET*/
 :root {
-  --primary: hsl(209, 67%, 10%);
-  --text-primary: hsl(295, 95%, 7%);
+  --primary: hsl(0, 0%, 13%);
+  --text-primary: hsl(0, 0%, 13%);
   --contrast: hsl(120, 100%, 100%);
   --text-contrast: hsl(120, 100%, 100%);
-  --accent: hsl(206, 100%, 65%);
+  --accent: hsl(120, 100%, 100%);
   --text-accent: hsl(162, 89%, 52%);
   --accent-light: hsl(49, 100%, 75%);
-  --accent-dark: hsl(209, 91%, 21%);
+  --accent-dark: hsl(0, 0%, 20%);
   --primary-font: 'bould';
 }
+
+/*CSS RESET*/
 *,
 *::after,
 *::before {
@@ -158,8 +159,9 @@ article:last-of-type {
   max-width: 131rem;
 }
 .editorial {
+  padding: 2rem 3rem;
   margin: 0 auto;
-  max-width: 70ch;
+  max-width: calc(70ch + 6rem);
 }
 .editorial h2 {
   margin-top: 3rem;

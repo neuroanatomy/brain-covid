@@ -15,7 +15,7 @@
             <nuxt-link to="/histology/">Histology</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/about/">About</nuxt-link>
+            <nuxt-link to="#about">About</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -39,12 +39,13 @@ export default {}
 .header::after {
   content: '';
   position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  border-radius: 8px;
-  background-color: var(--accent);
+  inset: 0;
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  height: 100%;
+  /* border-radius: 8px; */
+  background-color: var(--accent-dark);
+  z-index: -1;
 }
 .header__logo {
   font-size: 2.4rem;
@@ -60,7 +61,7 @@ export default {}
 .header__nav a {
   text-decoration: none;
 }
-.header .nuxt-link-exact-active {
+.header .nuxt-link-exact-active:not(.header__logo) {
   text-decoration: underline;
 }
 </style>
